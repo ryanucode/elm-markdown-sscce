@@ -7934,11 +7934,19 @@ var _evancz$elm_markdown$Markdown$Options = F4(
 		return {githubFlavored: a, defaultHighlighting: b, sanitize: c, smartypants: d};
 	});
 
+var _user$project$Main$myOptions = _elm_lang$core$Native_Utils.update(
+	_evancz$elm_markdown$Markdown$defaultOptions,
+	{
+		githubFlavored: _elm_lang$core$Maybe$Just(
+			{tables: true, breaks: false}),
+		defaultHighlighting: _elm_lang$core$Maybe$Just('html')
+	});
 var _user$project$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
-	A2(
-		_evancz$elm_markdown$Markdown$toHtml,
+	A3(
+		_evancz$elm_markdown$Markdown$toHtmlWith,
+		_user$project$Main$myOptions,
 		{ctor: '[]'},
-		'\n# A code block\n```\n<p>Hello world!</p>\n```\n\n# Inline code:\nLorem ipsum dolor `{ key: \"value\" }` sit amet, consectetur adipiscing elit. Vestibulum sit amet magna in velit lacinia suscipit at vel nunc. Sed gravida nibh vel urna faucibus cursus. Phasellus sit amet tortor orci. Pellentesque elementum est enim, vitae blandit sapien pellentesque sed. Morbi sollicitudin et orci ut sodales. Phasellus ac augue molestie, tristique dui eget, dapibus erat. Donec quis tempor dolor. Vivamus sit amet erat blandit, tempor leo eu, ultricies neque. Curabitur tempus gravida malesuada. Ut porta lectus at sem efficitur rhoncus. Sed posuere sit amet neque sed dignissim. Nulla posuere, nunc et sodales eleifend, orci massa scelerisque justo, at rutrum nibh sem ut magna. Aenean sapien nisl, ornare in placerat ac, convallis eget massa.\n\n'));
+		'\n# A code block\n```html\n<p>Hello world!</p>\n```\n\n# Inline code:\nLorem ipsum dolor `{ key: \"value\" }` sit amet, consectetur adipiscing elit. Vestibulum sit amet magna in velit lacinia suscipit at vel nunc. Sed gravida nibh vel urna faucibus cursus. Phasellus sit amet tortor orci. Pellentesque elementum est enim, vitae blandit sapien pellentesque sed. Morbi sollicitudin et orci ut sodales. Phasellus ac augue molestie, tristique dui eget, dapibus erat. Donec quis tempor dolor. Vivamus sit amet erat blandit, tempor leo eu, ultricies neque. Curabitur tempus gravida malesuada. Ut porta lectus at sem efficitur rhoncus. Sed posuere sit amet neque sed dignissim. Nulla posuere, nunc et sodales eleifend, orci massa scelerisque justo, at rutrum nibh sem ut magna. Aenean sapien nisl, ornare in placerat ac, convallis eget massa.\n\n'));
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};

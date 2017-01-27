@@ -1,11 +1,16 @@
 module Main exposing (..)
 
 import Html exposing (..)
-import Markdown
+import Markdown exposing (defaultOptions)
 
-main = Markdown.toHtml [] """
+myOptions =
+    { defaultOptions
+    | githubFlavored = Just { tables = True, breaks = False }
+    , defaultHighlighting = Just "html"
+    }
+main = Markdown.toHtmlWith myOptions [] """
 # A code block
-```
+```html
 <p>Hello world!</p>
 ```
 
